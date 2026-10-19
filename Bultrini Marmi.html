@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bultrini Marmi · Marmi e pietre su misura a Roma</title>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f4f1;--surf:#e8e9e5;--ink:#1c2622;--mut:#55625c;--acc:#2c5a49;--accink:#fff;--gold:#9a7a3c;--line:#d0d3ce;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111715;--surf:#1a231f;--ink:#edf0ed;--mut:#9ba9a2;--acc:#86bfa6;--accink:#0e1613;--gold:#d2b269;--line:#2b3731;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111715;--surf:#1a231f;--ink:#edf0ed;--mut:#9ba9a2;--acc:#86bfa6;--accink:#0e1613;--gold:#d2b269;--line:#2b3731;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Karla,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.serif,h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-family:Marcellus,Georgia,serif;font-size:1.2rem;text-decoration:none;letter-spacing:.03em}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;font-size:.95rem;color:var(--mut)}
+nav ul a:hover{color:var(--ink)}
+.call{background:var(--acc);color:var(--accink);padding:9px 18px;text-decoration:none;font-weight:700;font-size:.95rem;white-space:nowrap}
+@media(max-width:760px){nav ul{display:none}}
+/* hero */
+.hero{position:relative;color:#f1f3f0;background:linear-gradient(135deg,#17372d 0%,#0f1f1a 55%,#1d3f33 100%);overflow:hidden;padding:96px 0 110px}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero svg path{fill:none;stroke-linecap:round}
+.hero .wrap{position:relative}
+h1{font-size:clamp(3rem,10.5vw,7.6rem);line-height:.95;margin:0 0 26px;letter-spacing:.015em}
+.hero p{font-size:1.28rem;max-width:36ch;color:#cfdad4;margin:0 0 34px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;text-decoration:none;font-weight:700;border:2px solid currentColor;cursor:pointer;background:none;font:inherit;font-weight:700;color:inherit}
+.btn.p{background:#e8d9ae;border-color:#e8d9ae;color:#1a2a23}
+.hero .tags{margin-top:54px;display:flex;gap:28px;flex-wrap:wrap;color:#b4c5bd;font-size:.98rem}
+.hero .tags span{border-left:2px solid #c8ab62;padding-left:12px}
+section{padding:84px 0;border-top:1px solid var(--line)}
+section.hero{border:0}
+h2{font-size:clamp(1.9rem,4.2vw,2.8rem);line-height:1.12;margin:0 0 14px;max-width:22ch}
+.sub{color:var(--mut);max-width:58ch;margin:0 0 42px}
+/* materials */
+.mat{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+.slab{width:100%;aspect-ratio:4/3;display:block;box-shadow:0 18px 40px -18px rgba(0,0,0,.45)}
+.sw{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 24px;padding:0;list-style:none}
+.sw button{width:100%;aspect-ratio:1;border:2px solid var(--line);cursor:pointer;padding:0;position:relative;transition:transform .15s}
+.sw button[aria-pressed="true"]{border-color:var(--gold);transform:scale(1.04)}
+.sw span{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem;padding:3px 6px;text-align:left}
+#mname{font-size:1.7rem;margin:0 0 6px}
+#mtext{color:var(--mut);margin:0 0 10px}
+#muse{margin:0;font-weight:700}
+@media(max-width:820px){.mat{grid-template-columns:1fr}}
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.grid>div{padding:32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid h3{font-size:1.4rem;margin:0 0 8px}
+.grid p{margin:0 0 12px;color:var(--mut)}
+.grid small{color:var(--gold);font-weight:700}
+/* process */
+.band{background:var(--surf)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;border-top:3px solid var(--gold);padding-top:16px}
+.steps li:before{content:counter(s);font-family:Marcellus,Georgia,serif;font-size:2.4rem;color:var(--gold);display:block;line-height:1}
+.steps h3{font-size:1.25rem;margin:8px 0 6px}
+.steps p{margin:0;color:var(--mut)}
+/* quote */
+.q{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:820px){.q{grid-template-columns:1fr}}
+label{display:block;font-weight:700;margin:0 0 6px;font-size:.95rem}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:12px;margin:0 0 18px;border-radius:0}
+textarea{min-height:110px;resize:vertical}
+#out{display:none;background:var(--surf);border-left:4px solid var(--gold);padding:18px;margin-top:20px;white-space:pre-wrap}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-family:Marcellus,Georgia,serif;font-size:1.2rem}
+details p{margin:10px 0 0;color:var(--mut);max-width:62ch}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
+dt{font-weight:700}dd{margin:0 0 18px;color:var(--mut)}
+footer{padding:30px 0 90px;color:var(--mut);font-size:.93rem;border-top:1px solid var(--line)}
+.bar{display:none}
+@media(max-width:760px){.bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--acc);color:var(--accink);text-align:center;padding:15px 12px calc(15px + env(safe-area-inset-bottom,0px));font-weight:700;text-decoration:none}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise 1s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(16px)}}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">Bultrini Marmi</a>
+  <ul><li><a href="#materiali">Materiali</a></li><li><a href="#lavorazioni">Lavorazioni</a></li><li><a href="#metodo">Come lavoriamo</a></li><li><a href="#preventivo">Preventivo</a></li><li><a href="#contatti">Contatti</a></li></ul>
+  <a class="call" href="tel:+390686660725">06 8666 0725</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-30 180 C220 100 330 330 560 260 S920 60 1240 230" stroke="#e8d9ae" stroke-opacity=".55" stroke-width="2.5"/>
+    <path d="M-30 190 C220 115 330 340 560 272 S920 80 1240 245" stroke="#ffffff" stroke-opacity=".12" stroke-width="1"/>
+    <path d="M-30 430 C200 380 380 560 620 480 S980 330 1240 470" stroke="#ffffff" stroke-opacity=".18" stroke-width="1.5"/>
+    <path d="M160 -20 C220 160 110 300 230 470 S360 650 330 730" stroke="#e8d9ae" stroke-opacity=".3" stroke-width="1.5"/>
+    <path d="M900 -20 C820 130 960 250 880 400 S1010 590 970 730" stroke="#ffffff" stroke-opacity=".14" stroke-width="2"/>
+  </svg>
+  <div class="wrap">
+    <h1>Il marmo,<br>lavorato a Roma.</h1>
+    <p>Top, scale, pavimenti, arredi e opere in pietra naturale, tagliati su misura nel nostro laboratorio.</p>
+    <div class="btns"><a class="btn p" href="#preventivo">Richiedi un preventivo</a><a class="btn" href="tel:+390686660725">Chiama in laboratorio</a></div>
+    <div class="tags"><span>Via Giulio Rolland, 22 · Roma</span><span>Lavorazioni su misura</span><span>Per privati e professionisti</span></div>
+  </div>
+</header>
+
+<section id="materiali"><div class="wrap">
+  <h2>Scegli la pietra, vedi la differenza</h2>
+  <p class="sub">Ogni materiale ha venature, colore e carattere diversi. Tocca un campione per scoprire dove rende meglio.</p>
+  <div class="mat">
+    <svg class="slab" id="slab" viewBox="0 0 400 300" role="img" aria-label="Campione di lastra"><rect id="sf" width="400" height="300"/><g id="sv" fill="none" stroke-linecap="round"></g></svg>
+    <div>
+      <ul class="sw" id="sw"></ul>
+      <h3 id="mname"></h3><p id="mtext"></p><p id="muse"></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="lavorazioni" class="band"><div class="wrap">
+  <h2>Cosa realizziamo</h2>
+  <p class="sub">Dal singolo davanzale all’intero rivestimento: lavoriamo sul progetto, sulle misure e sul budget che hai.</p>
+  <div class="grid">
+    <div><h3>Cucine</h3><p>Piani di lavoro, isole e paraschizzi con bordi e fori per lavello e piano cottura.</p><small>Top su misura</small></div>
+    <div><h3>Bagni</h3><p>Piani lavabo, rivestimenti doccia, mensole e soglie.</p><small>Resistente all’acqua</small></div>
+    <div><h3>Scale e soglie</h3><p>Gradini, pedate, alzate, davanzali e battiscopa per interni ed esterni.</p><small>Finiture antiscivolo</small></div>
+    <div><h3>Pavimenti e rivestimenti</h3><p>Fornitura e posa di lastre e marmette in marmo, travertino e granito.</p><small>Anche lucidatura</small></div>
+    <div><h3>Arredo e camini</h3><p>Tavoli, console, camini e complementi disegnati con te.</p><small>Pezzi unici</small></div>
+    <div><h3>Opere funerarie</h3><p>Lapidi, cappelle e lavorazioni commemorative, con cura e rispetto dei tempi.</p><small>Consulenza dedicata</small></div>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <h2>Dalla prima chiamata alla posa</h2>
+  <p class="sub">Un percorso chiaro, così sai sempre cosa succede e quando.</p>
+  <ol class="steps">
+    <li><h3>Ci racconti il lavoro</h3><p>Per telefono o in laboratorio: cosa serve, per quale ambiente, entro quando.</p></li>
+    <li><h3>Sopralluogo e misure</h3><p>Rileviamo le misure reali per evitare errori in fase di taglio.</p></li>
+    <li><h3>Preventivo e campioni</h3><p>Ricevi costi e tempi, e scegli il materiale vedendolo dal vivo.</p></li>
+    <li><h3>Taglio e lavorazione</h3><p>Sagomatura, bordi, fori e finitura nel nostro laboratorio.</p></li>
+    <li><h3>Consegna e posa</h3><p>Installazione a regola d’arte e controllo finale insieme a te.</p></li>
+  </ol>
+</div></section>
+
+<section id="preventivo" class="band"><div class="wrap q">
+  <div>
+    <h2>Prepara la tua richiesta</h2>
+    <p class="sub">Compila i campi: ti creiamo il messaggio già pronto da copiare e da dettare o inviare quando ci contatti. Più dettagli dai, più rapida sarà la risposta.</p>
+    <p class="sub">Hai una scadenza? Scrivila: ci aiuta a dirti subito se è realistica.</p>
+  </div>
+  <div>
+    <label for="f1">Che lavoro ti serve?</label>
+    <select id="f1"><option>Top cucina</option><option>Bagno</option><option>Scale o soglie</option><option>Pavimento o rivestimento</option><option>Arredo o camino</option><option>Opera funeraria</option><option>Altro</option></select>
+    <label for="f2">Materiale che preferisci</label>
+    <select id="f2"><option>Non so ancora, consigliatemi</option><option>Marmo bianco di Carrara</option><option>Calacatta</option><option>Travertino romano</option><option>Nero Marquina</option><option>Verde Alpi</option><option>Granito</option></select>
+    <label for="f3">Misure o dettagli</label>
+    <textarea id="f3" placeholder="Es. piano 280 × 65 cm, con foro per lavello"></textarea>
+    <label for="f4">Entro quando ti serve</label>
+    <input id="f4" placeholder="Es. entro fine mese">
+    <button class="btn p" id="go" type="button">Crea il messaggio</button>
+    <div id="out" role="status"></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Domande frequenti</h2>
+  <p class="sub">&nbsp;</p>
+  <details><summary>Fate anche lavori piccoli?</summary><p>Contattaci descrivendo il lavoro: valutiamo caso per caso e ti diciamo con onestà tempi e fattibilità.</p></details>
+  <details><summary>Posso portare un disegno o le misure?</summary><p>Sì. Con disegno, foto e misure possiamo dare un’indicazione più precisa già alla prima chiamata.</p></details>
+  <details><summary>Quanto costa un lavoro in marmo?</summary><p>Dipende da materiale, spessore, finitura e complessità. Per questo il preventivo si fa sul progetto reale.</p></details>
+  <details><summary>Come si mantiene il marmo?</summary><p>Con detergenti neutri e senza acidi: aceto e limone possono opacizzare il marmo lucido. Per superfici rovinate si può intervenire con levigatura e lucidatura.</p></details>
+  <details><summary>Quanto tempo serve?</summary><p>Varia in base al lavoro e al periodo. Contattaci con anticipo e ti indichiamo una data realistica prima di iniziare.</p></details>
+</div></section>
+
+<section id="contatti" class="band"><div class="wrap">
+  <h2>Vieni a vedere le lastre</h2>
+  <p class="sub">Il laboratorio è a Roma, nel quartiere Eur-Spinaceto.</p>
+  <dl class="contact">
+    <div><dt>Indirizzo</dt><dd>Via Giulio Rolland, 22<br>00125 Roma RM</dd><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bultrini+Marmi+Via+Giulio+Rolland+22+Roma">Indicazioni su Maps</a></div>
+    <div><dt>Telefono</dt><dd><a href="tel:+390686660725">06 8666 0725</a></dd><dt>Orari</dt><dd>Apertura alle 8:00. Chiama prima per confermare giorni e orari.</dd></div>
+  </dl>
+</div></section>
+
+<footer><div class="wrap">© Bultrini Marmi · Via Giulio Rolland, 22, 00125 Roma · 06 8666 0725</div></footer>
+<a class="bar" href="tel:+390686660725">Chiama 06 8666 0725</a>
+
+<script>
+const M=[
+{n:"Carrara bianco",f:"#e7e9ec",v:"#8f98a3",u:"Cucine, bagni, scale e arredi dallo stile classico.",t:"Il marmo bianco-grigio delle Alpi Apuane, con venature sottili e morbide."},
+{n:"Calacatta",f:"#f3f0ea",v:"#b99a58",u:"Piani cucina e rivestimenti di grande effetto.",t:"Fondo molto bianco e venature marcate dorate o grigie: un materiale scenografico."},
+{n:"Travertino romano",f:"#dccaa7",v:"#b39b6f",u:"Pavimenti, rivestimenti e arredi dal tono caldo.",t:"Pietra calda e porosa, legata alla tradizione architettonica romana."},
+{n:"Nero Marquina",f:"#15161a",v:"#e9eaea",u:"Bagni, top e dettagli di forte contrasto.",t:"Fondo nero profondo con sottili venature bianche, elegante e deciso."},
+{n:"Verde Alpi",f:"#1f4034",v:"#9cc3b0",u:"Camini, mensole e superfici di carattere.",t:"Verde scuro con riflessi chiari, ideale per scelte distintive."},
+{n:"Granito grigio",f:"#8d9193",v:"#4f5456",u:"Esterni, cucine e zone di forte uso.",t:"Molto duro e resistente a graffi e usura, adatto a un uso quotidiano intenso."}];
+const sw=document.getElementById("sw"),sf=document.getElementById("sf"),sv=document.getElementById("sv");
+function paths(c,i){const o=i*13;return `<path d="M-10 ${70+o} C100 ${20+o} 160 ${150+o%40} 260 ${100+o} S380 ${30+o} 420 ${90+o}" stroke="${c}" stroke-opacity=".7" stroke-width="2.4"/><path d="M-10 ${200-o} C90 ${160-o} 180 ${270-o%30} 280 ${210-o} S380 ${150} 420 ${220}" stroke="${c}" stroke-opacity=".5" stroke-width="1.4"/><path d="M120 -10 C150 90 90 160 170 240 S200 290 190 310" stroke="${c}" stroke-opacity=".4" stroke-width="1"/>`}
+function pick(i){const m=M[i];sf.setAttribute("fill",m.f);sv.innerHTML=paths(m.v,i);
+document.getElementById("mname").textContent=m.n;document.getElementById("mtext").textContent=m.t;document.getElementById("muse").textContent="Ideale per: "+m.u;
+sw.querySelectorAll("button").forEach((b,k)=>b.setAttribute("aria-pressed",k===i))}
+M.forEach((m,i)=>{const li=document.createElement("li"),b=document.createElement("button");b.style.background=m.f;b.setAttribute("aria-label",m.n);b.innerHTML="<span>"+m.n+"</span>";b.onclick=()=>pick(i);li.appendChild(b);sw.appendChild(li)});
+pick(0);
+document.getElementById("go").onclick=()=>{
+const v=id=>document.getElementById(id).value.trim();
+let t="Buongiorno, vorrei un preventivo per: "+v("f1").toLowerCase()+".\nMateriale: "+v("f2")+".";
+if(v("f3"))t+="\nDettagli: "+v("f3")+".";
+if(v("f4"))t+="\nTempistica: "+v("f4")+".";
+t+="\nGrazie!";
+const o=document.getElementById("out");o.style.display="block";o.textContent=t+"\n\nChiama il 06 8666 0725 e comunica questi dati.";
+try{navigator.clipboard.writeText(t)}catch(e){}};
+</script>
+</body>
+</html>
